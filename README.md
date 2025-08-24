@@ -69,3 +69,99 @@ The **Airbnb Clone Project** is a comprehensive, real-world application designed
 - **Redis**: Used for caching and session management.
 - **Docker**: Containerization for consistent development and deployment.
 - **CI/CD Pipelines**: Automated testing and deployment of code
+
+---
+
+## Database Design
+
+### Entity Relationship Diagram (ERD)
+
+```
++---------+        +-----------+        +----------+
+|  User   |<------>| Property  |<------>| Review   |
++---------+        +-----------+        +----------+
+     |                  |  ^                ^
+     |                  |  |                |
+     v                  v  |                |
++---------+        +-----------+        +---+
+| Booking |<------>| Payment   |        |
++---------+        +-----------+        |
+     ^                                  |
+     |                                  |
+     +----------------------------------+
+```
+
+**Legend:**
+
+- Arrows (`<------>`) indicate relationships (one-to-many, many-to-one).
+
+---
+
+### Entities & Fields
+
+#### User
+
+- `id`: Unique identifier
+- `username`: Login name
+- `email`: Contact email
+- `password`: Hashed password
+- **Relationships**:
+  - Can own multiple properties
+  - Can place multiple bookings
+  - Can write multiple reviews
+
+#### Property
+
+- `id`: Unique identifier
+- `name`: Property name
+- `description`: Details about the property
+- `owner_id`: References User
+- **Relationships**:
+  - Belongs to one user (owner)
+  - Has multiple bookings
+  - Has multiple reviews
+
+#### Booking
+
+- `id`: Unique identifier
+- `user_id`: References User
+- `property_id`: References Property
+- `start_date`: Booking start date
+- `end_date`: Booking end date
+- **Relationships**:
+  - Belongs to one user
+  - Belongs to one property
+  - Has one payment
+
+#### Payment
+
+- `id`: Unique identifier
+- `booking_id`: References Booking
+- `amount`: Payment amount
+- `status`: Paid, pending, etc.
+- `date`: Payment date
+- **Relationships**:
+  - Associated with one booking
+
+#### Review
+
+- `id`: Unique identifier
+- `user_id`: References User
+- `property_id`: References Property
+- `stars`: Rating (1-5)
+- `description`: Review text
+- **Relationships**:
+  - Written by one user
+  - Associated with one property
+
+---
+
+**Summary of Relationships:**
+
+- A user can own multiple properties and place multiple bookings.
+- A property can have multiple bookings and reviews.
+- Each booking is linked to one property and one user.
+- Each payment is associated with one booking.
+- A user can write many reviews, each review is for
+
+---

@@ -15,21 +15,6 @@ The **Airbnb Clone Project** is a comprehensive, real-world application designed
 
 ## Team Roles
 
-Business analyst - translate business needs into requiremnts  
-Product owner - manage backlog and carry project vision  
-Product managaer - keep project on track- budget and time  
-UI/UX designer - user journeys and use them to create user-friendly designs - UI
--UX  
-SW architect - design highlevel SW architecure and make executive decisions like what technologies to use and how to integrate  
-SW DEv - actually writes code - frontend -user facing
--backend - core of the app
--fullstack
-Quality Assuaranve tester- make sure system performance and that it meets requirements  
- Test automation enginner - write and maintain test scripts for automated testing  
- DevOps engineer - builds (Continuous integration and continuous delivery) CI/CD pipelines for fatser delivery
-
-## Team Roles
-
 ```
   Project
      │
@@ -71,3 +56,16 @@ Quality Assuaranve tester- make sure system performance and that it meets requir
 ```
 
 ---
+
+## Technology Stack
+
+## Technology Stack
+
+- **Django**: High-level Python web framework for building the RESTful API.
+- **Django REST Framework**: Tools for creating and managing RESTful APIs.
+- **PostgreSQL**: Powerful relational database for data storage.
+- **GraphQL**: Flexible and efficient querying of data.
+- **Celery**: Handles asynchronous tasks (e.g., notifications, payment processing).
+- **Redis**: Used for caching and session management.
+- **Docker**: Containerization for consistent development and deployment.
+- **CI/CD Pipelines**: Automated testing and deployment of code

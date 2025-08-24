@@ -228,3 +228,13 @@ Implements indexing and caching strategies to improve database performance and r
   Proper authentication, authorization, and rate limiting prevent malicious activity, data breaches, and service disruptions, ensuring a reliable experience for all users.
 
 ---
+
+## CI/CD Pipeline
+
+Continuous Integration and Continuous Delivery (CI/CD) pipelines automate the process of building, testing, and deploying code changes. This ensures that new features, bug fixes, and updates are integrated smoothly and delivered quickly to production, reducing manual errors and improving overall software quality. CI/CD is essential for maintaining a reliable and scalable application, enabling rapid development cycles and consistent deployments.
+
+**Tools Used:**
+
+- **GitHub Actions**: Automates workflows for building, testing, and deploying code.
+- **Docker**: Provides containerization for consistent environments across development, testing, and production.
+- **AWS**: Provides cloud infrastructure for hosting, scaling, and automating deployments. AWS services like Elastic Beanstalk, EC2, and S3 can be integrated into CI/CD pipelines to enable automated provisioning, deployment, and monitoring of application resources.

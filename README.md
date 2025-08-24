@@ -193,3 +193,38 @@ Allows users to post and manage reviews for properties they have booked. Reviews
 Implements indexing and caching strategies to improve database performance and reduce load times. This feature ensures the application remains responsive and scalable, even as the number of users
 
 ---
+
+## API Security
+
+### Key Security Measures
+
+- **Authentication**  
+  Secure login and token-based authentication (e.g., JWT) ensure only authorized users can access protected endpoints. This is crucial for protecting user accounts and sensitive data.
+
+- **Authorization**  
+  Role-based access control restricts actions based on user roles (e.g., owner, guest, admin). This prevents unauthorized access to resources such as property management and booking details.
+
+- **Rate Limiting**  
+  Limits the number of requests per user/IP to prevent abuse and denial-of-service attacks. This helps maintain service availability and protects against brute-force attempts.
+
+- **Input Validation & Sanitization**  
+  All incoming data is validated and sanitized to prevent common vulnerabilities like SQL injection and cross-site scripting (XSS).
+
+- **HTTPS Enforcement**  
+  All API traffic is encrypted using HTTPS, ensuring data privacy and integrity during transmission.
+
+- **Secure Payment Processing**  
+  Payment endpoints use industry-standard encryption and integrate with trusted payment gateways to safeguard financial transactions.
+
+### Why Security Is Crucial
+
+- **Protecting User Data**  
+  Personal information, account credentials, and booking history must be kept confidential to maintain user trust and comply with data protection regulations.
+
+- **Securing Payments**  
+  Financial transactions require robust security to prevent fraud and unauthorized access, ensuring users can safely book and pay for properties.
+
+- **Maintaining Platform Integrity**  
+  Proper authentication, authorization, and rate limiting prevent malicious activity, data breaches, and service disruptions, ensuring a reliable experience for all users.
+
+---
